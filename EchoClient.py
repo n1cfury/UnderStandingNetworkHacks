@@ -11,12 +11,12 @@ def banner():
   print "---- Basic Echo client p 34 -----"
 
 def echocli(HOST, PORT, msg)
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((HOST, PORT))
-s.send('Hello World')
-data = s.recv(1024)
-s.close()
-print 'Received', repr(data)
+	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	s.connect((HOST, PORT))
+	s.send('Hello World')
+	data = s.recv(1024)
+	s.close()
+	print 'Received', repr(data)
 
 def main():
   if len(sys.argv[3:]):
